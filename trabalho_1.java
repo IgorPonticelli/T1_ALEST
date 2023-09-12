@@ -1,43 +1,27 @@
 public class trabalho_1 {
     public static void main(String[] args) {
-
-        System.out.println("i |Cont_op F1 |Cont_op F2 |Cont_op F3 |Cont_op F4 |Cont_op F5");
-         System.out.print("\n");
+        int i = 109; // Mudamos para o valor de entrada escolhido
+        System.out.println("Função 1: ");
+        System.out.println("Cont_op: "+funcao1(i));
+        System.out.println(" ");
+        System.out.println("Função 2: ");
+        System.out.println("Cont_op: "+funcao2(i));
+        System.out.println(" ");
+        System.out.println("Função 3: ");
+        System.out.println("Cont_op: "+funcao3(i));
+        System.out.println(" ");
+        System.out.println("Função 4: ");
+        System.out.println("Cont_op: "+funcao4(i));
+        System.out.println(" ");
+        System.out.println("Função 5: ");
+        System.out.println("Cont_op: "+funcao5(i));
         
-        for(int i = 1; i <= 1000; i++){
-            System.out.print(i);
-            System.out.print("   ");
 
-            double antes = System.currentTimeMillis();
-            funcao1(i);
-            double depois = System.currentTimeMillis();
-            System.out.print((int)(depois-antes)); System.out.print("   ");
-
-            antes = System.currentTimeMillis();
-            funcao2(i);
-            depois = System.currentTimeMillis();
-            System.out.print((int)(depois-antes)); System.out.print("   ");
-
-            antes = System.currentTimeMillis();
-            funcao3(i);
-            depois = System.currentTimeMillis();
-            System.out.print((int)(depois-antes)); System.out.print("   ");
-
-            antes = System.currentTimeMillis();
-            funcao4(i);
-            depois = System.currentTimeMillis();
-            System.out.print((int)(depois-antes)); System.out.print("   ");
-
-            antes = System.currentTimeMillis();
-            funcao5(i);
-            depois = System.currentTimeMillis();
-            System.out.println((int)(depois-antes)); System.out.print("   ");
-        }
-
+            
     }
-    
         
         public static int funcao1(int n){
+            double antes = System.currentTimeMillis();
             int i, j, k, res = 0;
             int cont_op = 0;
             for(i = n; i <= n+1; i += 1){
@@ -48,10 +32,13 @@ public class trabalho_1 {
                     } 
                 }
             }
+            double depois = System.currentTimeMillis();
+            System.out.println("Tempo de execução: " + (depois-antes));
             return cont_op;
         }
     
         public static int funcao2(int n){
+            double antes = System.currentTimeMillis();
             int i, j, k, res = 0;
             int cont_op = 0;
             for(i = n; i <= n+1; i += 2){
@@ -62,10 +49,13 @@ public class trabalho_1 {
                     } 
                 }
             }
+            double depois = System.currentTimeMillis();
+            System.out.println("Tempo de execução: " + (depois-antes));
             return cont_op;
         }
     
         public static int funcao3(int n){
+            double antes = System.currentTimeMillis();
             int i, j, k, res = 0;
             int cont_op = 0;
             for(i = n+1; i <= n+1; i += 1){
@@ -73,13 +63,17 @@ public class trabalho_1 {
                     for(k = j; k <= n*j; k += Math.abs(j-i)+1){
                         res = res + n*k;
                         cont_op++;
+
                     } 
                 }
             }
+            double depois = System.currentTimeMillis();
+            System.out.println("Tempo de execução: " + (depois-antes));
             return cont_op;
         }
     
         public static int funcao4(int n){
+            double antes = System.currentTimeMillis();
             int i, j, k, res = 0;
             int cont_op = 0;
             for(i = n/2; i <= n*n; i += 1){
@@ -90,10 +84,13 @@ public class trabalho_1 {
                     } 
                 }
             }
+            double depois = System.currentTimeMillis();
+            System.out.println("Tempo de execução: " + (depois-antes));
             return cont_op;
         }
     
         public static int funcao5(int n){
+            double antes = System.currentTimeMillis();
             int i, j, k, res = 0;
             int cont_op = 0;
             for(i = n/2; i <= n+1; i += 2){
@@ -104,6 +101,8 @@ public class trabalho_1 {
                     } 
                 }
             }
+            double depois = System.currentTimeMillis();
+             System.out.println("Tempo de execução: " + (depois-antes));
             return cont_op;
         }
     
